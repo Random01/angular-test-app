@@ -1,0 +1,38 @@
+.parameter-section {
+  width: 800px;
+  border: 1px black solid;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2px;
+
+  .parameter-block {
+    display: flex;
+    flex-direction: row;
+
+    .parameter-name {
+      flex: 15%;
+
+      padding-left: 2px;
+      padding-right: 2px;
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .parameter-value {
+      flex: 85%;
+
+      INPUT {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+
+  .parameter-block:not(:last-child) {
+    padding-bottom: 2px;
+  }
+
+}
