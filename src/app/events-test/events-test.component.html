@@ -1,0 +1,54 @@
+
+<div class="section">
+  <div class="title">
+    <span>preventDefault</span>
+  </div>
+  <div class="example">
+    <div>Without</div>
+    <div (click)="console.log('container clicked')">
+      <input id="cb1" type="checkbox" (click)="console.log('checkbox clicked')" />
+      <label for="cb1">Checkbox</label>
+    </div>
+
+    <div>With</div>
+    <div (click)="console.log('container clicked')">
+      <input id="cb1" type="checkbox" (click)="console.log('checkbox clicked'); false" />
+      <label for="cb1">Checkbox</label>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="section">
+  <div class="title">
+    <span>stopPropagation on child container</span>
+  </div>
+  <div class="example">
+    <div>Without</div>
+    <div
+      class="parent-container"
+      (click)="console.log('Parent Container clicked')">
+
+      <div
+        class="child-container"
+        (click)="console.log('Child Container clicked')">
+      </div>
+      
+    </div>
+
+    <div>With</div>
+    <div
+      class="parent-container"
+      (click)="console.log('Parent Container clicked')">
+
+      <div
+        class="child-container"
+        (click)="console.log('Child Container clicked'); $event.stopPropagation();">
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,12 @@
+<div>
+  <div>
+    <button (click)="onChangeClicked()">Change</button>
+  </div>
+  <div *ngIf="isLoading == false else loading">
+    Content!
+  </div>
+
+  <ng-template #loading>
+    <div>Loading....</div>
+  </ng-template>
+</div>
